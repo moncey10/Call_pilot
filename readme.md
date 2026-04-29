@@ -1,24 +1,43 @@
-# AI call screening system using Twilio + FastAPI + OpenAI — auto-transcribes and summarizes calls
+# 📞 Call Pilot — AI Call Screening & Summarization Assistant
 
-What It Does
-Most businesses miss important calls or waste time on irrelevant ones. Call Pilot solves this by acting as an AI-powered receptionist that:
+> An intelligent call screening system that automatically answers calls, understands caller intent, flags urgent ones, transcribes conversations, and sends WhatsApp notifications — fully automated, zero manual steps.
 
-📲 Screens incoming calls — figures out why the person is calling using LLM intent classification
-🚨 Flags urgent calls — automatically escalates high-priority calls for immediate attention
-🔄 Handles routing & recording — manages call flow via Twilio webhooks with zero manual intervention
-🗣️ Transcribes conversations — uses OpenAI Whisper for accurate speech-to-text
-📝 Generates clean summaries — GPT writes a structured summary of every call
-💬 Sends WhatsApp notifications — real-time alerts when urgent calls are flagged
-🗄️ Logs everything — all call data stored in SQLAlchemy database for later review
+## 🚀 What It Does
+-  Screens incoming calls using LLM intent classification
+-  Flags urgent calls for immediate attention
+-  Handles call routing & recording via Twilio webhooks — zero manual steps
+-  Transcribes calls using OpenAI Whisper
+-  Generates structured summaries using GPT
+-  Sends WhatsApp notifications for urgent calls
+-  Logs all call data in SQLAlchemy database
 
+## 🛠️ Tech Stack
+| Component | Technology |
+|-----------|-----------|
+| Backend API | FastAPI + Python |
+| Voice Calls | Twilio Voice API |
+| Transcription | OpenAI Whisper |
+| Summarization | OpenAI GPT |
+| Database | SQLAlchemy |
+| Notifications | Twilio WhatsApp API |
+| Architecture | Microservices + Webhooks |
 
-## Terminal - 1
-# uvicorn main:app --reload --port 8000
+## ⚙️ Setup
+```bash
+git clone https://github.com/moncey10/Call_pilot.git
+cd Call_pilot
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
-## Teminal - 2
-# ngrok http 8000
+## 🔑 Environment Variables
+```env
+TWILIO_ACCOUNT_SID=your_sid
+TWILIO_AUTH_TOKEN=your_token
+TWILIO_PHONE_NUMBER=+1xxxxxxxxxx
+OPENAI_API_KEY=your_openai_key
+WHATSAPP_TO=whatsapp:+91xxxxxxxxxx
+```
 
-## url to see established connection -> https://gibbosely-noneducative-suzy.ngrok-free.dev/incoming-call
-
-
-
+## 👤 Author
+**Moncey Patel** — AI/ML Engineer 
