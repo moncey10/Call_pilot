@@ -1,3 +1,4 @@
+# AI call screening system using Twilio + FastAPI + OpenAI — auto-transcribes and summarizes calls
 ## Terminal - 1
 # uvicorn main:app --reload --port 8000
 
